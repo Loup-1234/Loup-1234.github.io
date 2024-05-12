@@ -3,71 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>HOME</title>
-    <link
-      rel="icon"
-      href="https://i.pinimg.com/564x/1b/1f/ac/1b1fac8b08fb8e9966e91c2fa3da0828.jpg"
-    />
-    <style>
-      /*https://coolors.co/palette/c9aeaa-000000-6e619e-908bbb-413e79*/
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #6e619e;
-        margin: 0;
-      }
-
-      .topnav {
-        background-color: #141325;
-        overflow: hidden;
-      }
-      .topnav a {
-        float: left;
-        color: #f0f0f0;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-      .topnav a:hover {
-        background-color: #908bbb;
-        color: #f0f0f0;
-      }
-      .topnav a.active {
-        background-color: #413e79;
-        color: #f0f0f0;
-      }
-
-      .container {
-        margin: 0 auto;
-      }
-
-      h1 {
-        color: #141325;
-        text-align: center;
-        font-size: 150px;
-      }
-    </style>
   </head>
   <body>
-    <div class="topnav">
-      <a class="active" href="Home.html">HOME</a>
-    </div>
-
-    <div class="container" id="NICEContainer"></div>
-
-    <script>
-      function createNothing() {
-        const container = document.getElementById("NICEContainer");
-        const nothingDiv = document.createElement("h1");
-        nothingDiv.textContent = "There is nothing !!!";
-        container.appendChild(nothingDiv);
-      }
-
-      function infiniteLoop() {
-        createNothing();
-        setTimeout(infiniteLoop, 0);
-      }
-
-      infiniteLoop();
-    </script>
+    <h1>HOME</h1>
   </body>
 </html>
