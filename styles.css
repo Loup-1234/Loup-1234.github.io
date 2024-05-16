@@ -30,8 +30,32 @@ body {
   margin: 0 auto;
 }
 
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 h1 {
   color: #141325;
   text-align: center;
   font-size: 150px;
+}
+
+#score {
+  text-align: center;
+  font-size: 100px;
+}
+
+#button {
+  background-color: #6e619e;
+  border: none;
+  color: none;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 50px;
+  cursor: wait;
 }

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clicker</title>
+    <link rel="icon" href="Icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="unactive" href="index.html">HOME</a>
+      <a class="active" href="clicker.html">Clicker</a>
+    </div>
+    <div class="center">
+      <div id="score">0</div>
+      <div id="button">CLICK ME</div>
+      <script>
+        let counter = 0;
+
+        document.getElementById("button").onclick = () => {
+          counter = counter + 1;
+          document.getElementById("score").innerText = counter;
+        };
+      </script>
+    </div>
+  </body>
+</html>
