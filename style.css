@@ -82,6 +82,7 @@ li a:hover {
 
 .boîte1 figure figcaption {
   margin-top: 8px;
+  font-size: 12px;
 }
 
 .boîte1 h1 {
@@ -93,6 +94,69 @@ li a:hover {
   float: right;
   width: 45%;
   text-align: justify;
+}
+
+/****** github_contributions_graphic ******/
+
+.github_contributions_graphic {
+  z-index: 1;
+  margin: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/****** logos ******/
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin: 24px 0 ;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
+}
+
+.logos:hover .logos_animés {
+  animation-play-state: paused;
+}
+
+.logos_animés {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos_animés img {
+  width: 50px;
+  border-radius: 0;
+  margin: 0 60px;
 }
 
 /****** autres appareils ******/
