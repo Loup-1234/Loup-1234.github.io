@@ -16,9 +16,9 @@ img {
   border-radius: 16px;
 }
 
-/****** bar_de_navigation ******/
+/****** en-tête ******/
 
-.bar_de_navigation {
+header {
   z-index: 2;
   position: fixed !important;
   width: 50%;
@@ -27,7 +27,7 @@ img {
   padding-top: 16px;
   padding-left: 25%;
   padding-right: 25%;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -73,9 +73,15 @@ li a:hover {
   margin: 24px;
 }
 
-.boîte1 img {
-  width: 45%;
+.boîte1 figure {
   float: left;
+  width: 45%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.boîte1 figure figcaption {
+  margin-top: 8px;
 }
 
 .boîte1 h1 {
@@ -84,8 +90,31 @@ li a:hover {
 }
 
 .boîte1 p {
-  z-index: 1;
   float: right;
   width: 45%;
   text-align: justify;
+}
+
+/****** autres appareils ******/
+
+@media (max-width: 1000px) {
+  header {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .boîte1 figure {
+    width: 100%;
+  }
+
+  .boîte1 h1 {
+    float: left;
+    width: 100%;
+  }
+
+  .boîte1 p {
+    float: left;
+    width: 100%;
+  }
 }
