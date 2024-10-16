@@ -1,0 +1,91 @@
+/*https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff*/
+
+body {
+  text-align: left;
+  font-family: "Noto Sans", sans-serif;
+  cursor: default;
+  background-color: #ffffff;
+  padding-top: 70px;
+  padding-left: 8%;
+  padding-right: 8%;
+  transition: 0.2s ease;
+}
+
+img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/****** bar_de_navigation ******/
+
+.bar_de_navigation {
+  z-index: 2;
+  position: fixed !important;
+  width: 50%;
+  top: 0;
+  left: 0;
+  padding-top: 16px;
+  padding-left: 25%;
+  padding-right: 25%;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+ul {
+  border-radius: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #14213d;
+}
+
+li {
+  float: left;
+  width: calc(100% / 3);
+}
+
+li a {
+  border-radius: 16px;
+  display: block;
+  color: #fca311;
+  text-align: center;
+  margin: 8px;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #fca311;
+  color: #14213d;
+}
+
+.active {
+  background-color: #fca311;
+  color: #14213d;
+}
+
+/****** boîte1 ******/
+
+.boîte1 {
+  z-index: 1;
+  float: left;
+  margin: 24px;
+}
+
+.boîte1 img {
+  width: 45%;
+  float: left;
+}
+
+.boîte1 h1 {
+  float: right;
+  width: 45%;
+}
+
+.boîte1 p {
+  z-index: 1;
+  float: right;
+  width: 45%;
+  text-align: justify;
+}
