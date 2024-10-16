@@ -121,7 +121,8 @@ li a:hover {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  margin: 24px 0 ;
+  margin: 24px 0;
+  text-align: center;
 }
 
 .logos:before,
@@ -180,5 +181,17 @@ li a:hover {
   .boîte1 p {
     float: left;
     width: 100%;
+  }
+
+  .github_contributions_graphic {
+    display: none;
+  }
+}
+
+/****** autres appareils ******/
+
+@media (max-width: 700px) {
+  .logos {
+    display: none;
   }
 }
