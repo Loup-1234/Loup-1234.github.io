@@ -187,7 +187,7 @@ li a:hover,
   background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff);
 }
 
-/*pause de l'animation au sur-vol*/
+/*pauser l'animation au sur-vol*/
 
 .logos:hover .logos_anime {
   animation-play-state: paused;
@@ -242,6 +242,8 @@ footer img {
 
   padding: 7px;
 }
+
+/*animer au sur-vol*/
 
 footer .social:hover {
   background-color: var(--color-3);
