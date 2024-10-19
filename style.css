@@ -17,7 +17,7 @@ body {
   min-height: 110vh;
 
   margin: 0;
-  padding-top: 90px;
+  padding-top: 100px;
   padding-left: 8%;
   padding-right: 8%;
 
@@ -30,6 +30,22 @@ body {
 
 img {
   width: 100%;
+}
+
+.horizontal1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal2 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  column-gap: 16px;
+  row-gap: 24px;
+
+  margin-bottom: 24px;
 }
 
 /****** en-tête ******/
@@ -99,6 +115,10 @@ li a:hover,
   margin: 24px;
 }
 
+.boîte1 img {
+  border-radius: 16px;
+}
+
 .boîte1 figure {
   float: left;
 
@@ -128,10 +148,6 @@ li a:hover,
   width: 45%;
 
   text-align: justify;
-}
-
-.boîte1 img {
-  border-radius: 16px;
 }
 
 /****** logos ******/
@@ -213,19 +229,23 @@ footer {
   float: left;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   border-radius: 24px;
   background-color: var(--color-4);
 
   height: 100px;
-  
+
   margin-top: auto;
+  margin-bottom: 16px;
   padding: 24px;
+
+  text-align: center;
 }
 
-footer .social {
+footer .social-icon {
   display: block;
 
   border-radius: 16px;
@@ -245,12 +265,47 @@ footer img {
 
 /*animer au sur-vol*/
 
-footer .social:hover {
+footer .social-icon:hover {
   background-color: var(--color-3);
 
   padding: 11px;
 
   transition: padding ease-in-out 0.2s;
+}
+
+footer div a {
+  color: var(--color-2);
+  text-decoration: none;
+}
+
+footer div a:hover {
+  color: var(--color-3);
+}
+
+/****** cartes ******/
+
+.carte {
+  z-index: 1;
+  float: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 24px;
+  background-color: var(--color-4);
+
+  padding: 16px;
+
+  color: var(--color-2);
+  text-decoration: none;
+}
+
+.carte img {
+  border-radius: 16px;
+  
+  margin-bottom: 16px;
 }
 
 /****** autres appareils ******/
@@ -281,5 +336,9 @@ footer .social:hover {
 
   .logos {
     display: none;
+  }
+
+  .horizontal2 {
+    grid-template-columns: auto;
   }
 }
