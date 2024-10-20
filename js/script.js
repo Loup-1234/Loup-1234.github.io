@@ -85,6 +85,12 @@ function couleurs() {
       '<link rel="stylesheet" href="../css/couleurs/indigo_dark.css">';
     localStorage.setItem("couleurs-stocker", "orange");
     localStorage.setItem("couleurs-actuel", "indigo");
+  } else {
+    document.getElementById("div-couleurs").innerHTML =
+      '<link rel="stylesheet" href="../css/couleurs/cyan_light.css">' +
+      '<link rel="stylesheet" href="../css/couleurs/cyan_dark.css">';
+    localStorage.setItem("couleurs-stocker", "green");
+    localStorage.setItem("couleurs-actuel", "cyan");
   }
 
   couleursStocker = localStorage.getItem("couleurs-stocker");
