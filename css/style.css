@@ -22,6 +22,19 @@ img {
   width: 100%;
 }
 
+p {
+  text-align: justify;
+}
+
+ul {
+  margin: 0 24px;
+  padding: 0;
+}
+
+li {
+  padding-bottom: 16px;
+}
+
 .horizontal1 {
   display: flex;
   justify-content: center;
@@ -116,16 +129,17 @@ header ul {
   border-radius: 24px;
   list-style-type: none;
 
-  background-color: var(--md-sys-color-surface-container);
-
   margin: 0;
-  padding: 0;
+
+  background-color: var(--md-sys-color-surface-container);
 }
 
 header li {
   float: left;
 
   width: calc(100% / 2);
+
+  padding: 0;
 }
 
 header li a {
@@ -207,56 +221,24 @@ header li a:hover,
   z-index: 1;
   float: left;
 
+  width: 45%;
+
   margin: 24px 0;
 }
 
-.boite2 img {
-  border-radius: 16px;
-
-  height: 450px;
-  object-fit: cover;
-}
-
-.boite2 figure {
+.boite2 h1 {
   float: left;
 
-  width: 45%;
-
-  margin-left: 0;
-  margin-right: 0;
-
-  text-align: center;
-}
-
-/*la légende de la figure*/
-
-.boite2 figure figcaption {
-  margin-top: 8px;
-
-  font-size: 12px;
-}
-
-.boite2 h1 {
-  float: right;
-
-  width: 45%;
-}
-
-.boite2 ul {
-  float: right;
-
-  width: 45%;
-}
-
-.boite2 li {
-  padding: 8px 0;
+  width: 100%;
 }
 
 /****** boîte3 ******/
 
 .boite3 {
   z-index: 1;
-  float: left;
+  float: right;
+
+  width: 45%;
 
   margin: 24px 0;
 }
@@ -270,11 +252,54 @@ header li a:hover,
 .boite3 ul {
   float: left;
 
+  width: 90%;
+}
+
+/****** boîte4 ******/
+
+.boite4 {
+  z-index: 1;
+  float: left;
+
+  margin: 24px 0;
+}
+
+.boite4 h1 {
+  float: left;
+
   width: 100%;
 }
 
-.boite3 li {
-  padding: 8px 0;
+.boite4 ul {
+  float: left;
+
+  width: 45%;
+}
+
+.boite4 img {
+  border-radius: 16px;
+
+  height: 450px;
+  object-fit: cover;
+}
+
+.boite4 figure {
+  float: right;
+
+  width: 45%;
+
+  margin-left: 0;
+  margin-right: 0;
+
+  text-align: center;
+}
+
+/*la légende de la figure*/
+
+.boite4 figure figcaption {
+  margin-top: 8px;
+
+  font-size: 12px;
 }
 
 /****** logos ******/
@@ -452,10 +477,19 @@ footer div a:hover {
 
 /****** autres appareils ******/
 
-@media (max-width: 1050px) {
+@media (max-width: 1500px) {
   body {
     padding-left: 4%;
     padding-right: 4%;
+  }
+  .boite1 h1 {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .horizontal2 {
+    grid-template-columns: auto;
   }
 
   .theme {
@@ -477,27 +511,29 @@ footer div a:hover {
     font-size: 90px;
   }
 
-  .boite2 figure {
+  .boite2 {
     width: 100%;
   }
 
-  .boite2 h1 {
+  .boite3 {
+    width: 100%;
+  }
+
+  .boite3 ul {
+    width: 90%;
+  }
+
+  .boite4 ul {
+    width: 90%;
+  }
+
+  .boite4 figure {
     float: left;
 
     width: 100%;
   }
 
-  .boite2 ul {
-    float: left;
-
-    width: 100%;
-  }
-
-  .logos {
+  .pc-uniquement {
     display: none;
-  }
-
-  .horizontal2 {
-    grid-template-columns: auto;
   }
 }
