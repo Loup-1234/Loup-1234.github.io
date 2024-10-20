@@ -262,6 +262,7 @@ header li a:hover,
   float: left;
 
   margin: 24px 0;
+  margin-bottom: 48px;
 }
 
 .boite4 h1 {
@@ -288,8 +289,7 @@ header li a:hover,
 
   width: 45%;
 
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 
   text-align: center;
 }
@@ -415,8 +415,7 @@ footer .social-icon {
   margin: 7px;
   padding: 7px;
 
-  transition: padding ease-in-out 0.2s, background-color ease-in-out 0.2s,
-    color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
 /*animer au sur-vol*/
@@ -424,10 +423,7 @@ footer .social-icon {
 footer .social-icon:hover {
   background-color: var(--md-sys-color-inverse-primary);
 
-  padding: 11px;
-
-  transition: padding ease-in-out 0.2s, background-color ease-in-out 0.2s,
-    color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
 footer div a {
