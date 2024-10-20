@@ -5,160 +5,148 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="..\style.css" />
+    <div id="div-couleurs">
+      <link rel="stylesheet" href="..\css\couleurs\cyan_light.css" />
+      <link rel="stylesheet" href="..\css\couleurs\cyan_dark.css" />
+    </div>
+    <link rel="stylesheet" href="..\css\style.css" />
     <link rel="icon" href="..\images\Icon.ico" alt="Photo de profil Github" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="theme">
-      <button
-        id="theme-toggle"
-        class="btn btn-link btn-sm ml-2 small"
-        type="button"
-      >
-        <img src="..\images\brush.svg" alt="Un pinceau" />
-      </button>
-    </div>
     <header>
-      <ul>
-        <li><a class="active" href="accueil.html">Accueil</a></li>
-        <li><a href="projets.html">Projets</a></li>
-      </ul>
+      <div class="theme">
+        <button id="bouton-theme" type="button">
+          <img src="..\images\Brush.svg" alt="Un pinceau" />
+        </button>
+        <button type="button" onclick="couleurs()">
+          <img src="..\images\Brush.svg" alt="Un pinceau" />
+        </button>
+      </div>
+      <div class="bar-de-navigation">
+        <ul>
+          <li><a class="active" href="accueil.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+        </ul>
+      </div>
+      <div class="lang">
+        <ul>
+          <li><a class="active" onclick="fr()">FR</a></li>
+          <li><a onclick="en()">EN</a></li>
+        </ul>
+      </div>
     </header>
-    <div class="lang">
+    <div class="boite1">
+      <h1>Alain Humeau</h1>
+      <h2>alias Loup_1234</h2>
+    </div>
+    <div class="logos">
+      <h1>Mes compétences</h1>
+      <div class="logos_anime">
+        <img src="..\images\language_logo\C.svg" alt="C" />
+        <img src="..\images\language_logo\C++.svg" alt="C++" />
+        <img src="..\images\language_logo\HTML.svg" alt="HTML" />
+        <img src="..\images\language_logo\CSS.svg" alt="CSS" />
+        <img src="..\images\language_logo\JavaScript.svg" alt="JavaScript" />
+        <img src="..\images\language_logo\Kotlin.svg" alt="Kotlin" />
+        <img src="..\images\language_logo\Python.svg" alt="Python" />
+      </div>
+      <div class="logos_anime">
+        <img src="..\images\language_logo\C.svg" alt="C" />
+        <img src="..\images\language_logo\C++.svg" alt="C++" />
+        <img src="..\images\language_logo\HTML.svg" alt="HTML" />
+        <img src="..\images\language_logo\CSS.svg" alt="CSS" />
+        <img src="..\images\language_logo\JavaScript.svg" alt="JavaScript" />
+        <img src="..\images\language_logo\Kotlin.svg" alt="Kotlin" />
+        <img src="..\images\language_logo\Python.svg" alt="Python" />
+      </div>
+      <div class="logos_anime">
+        <img src="..\images\language_logo\C.svg" alt="C" />
+        <img src="..\images\language_logo\C++.svg" alt="C++" />
+        <img src="..\images\language_logo\HTML.svg" alt="HTML" />
+        <img src="..\images\language_logo\CSS.svg" alt="CSS" />
+        <img src="..\images\language_logo\JavaScript.svg" alt="JavaScript" />
+        <img src="..\images\language_logo\Kotlin.svg" alt="Kotlin" />
+        <img src="..\images\language_logo\Python.svg" alt="Python" />
+      </div>
+    </div>
+    <div class="logos">
+      <h1>Les logiciels que j'utilise</h1>
+      <div class="logos_anime">
+        <img src="..\images\app_logo\Visual_Studio.svg" alt="Visual_Studio" />
+        <img
+          src="..\images\app_logo\Visual_Studio_Code.svg"
+          alt="Visual_Studio_Code"
+        />
+        <img src="..\images\app_logo\Android_Studio.svg" alt="Android_Studio" />
+        <img src="..\images\app_logo\Godot.svg" alt="Godot" />
+        <img src="..\images\app_logo\Blender.svg" alt="Blender" />
+        <img src="..\images\app_logo\Krita.svg" alt="Krita" />
+      </div>
+      <div class="logos_anime">
+        <img src="..\images\app_logo\Visual_Studio.svg" alt="Visual_Studio" />
+        <img
+          src="..\images\app_logo\Visual_Studio_Code.svg"
+          alt="Visual_Studio_Code"
+        />
+        <img src="..\images\app_logo\Android_Studio.svg" alt="Android_Studio" />
+        <img src="..\images\app_logo\Godot.svg" alt="Godot" />
+        <img src="..\images\app_logo\Blender.svg" alt="Blender" />
+        <img src="..\images\app_logo\Krita.svg" alt="Krita" />
+      </div>
+      <div class="logos_anime">
+        <img src="..\images\app_logo\Visual_Studio.svg" alt="Visual_Studio" />
+        <img
+          src="..\images\app_logo\Visual_Studio_Code.svg"
+          alt="Visual_Studio_Code"
+        />
+        <img src="..\images\app_logo\Android_Studio.svg" alt="Android_Studio" />
+        <img src="..\images\app_logo\Godot.svg" alt="Godot" />
+        <img src="..\images\app_logo\Blender.svg" alt="Blender" />
+        <img src="..\images\app_logo\Krita.svg" alt="Krita" />
+      </div>
+    </div>
+    <div class="boite2">
+      <figure>
+        <img
+          src="..\images\rapport_de_stage.jpg"
+          alt="Rapport de stage de chez Thales"
+        />
+        <figcaption>Mon rapport de stage</figcaption>
+      </figure>
+      <h1>Stage découverte chez Thales</h1>
       <ul>
-        <li><a class="active" onclick="fr()">FR</a></li>
-        <li><a onclick="en()">EN</a></li>
+        <li>
+          À Cholet (49), au sein d'une entreprise spécialisée dans les
+          équipements de communication militaire.
+        </li>
+        <li>Exploration de tous les départements de Thales.</li>
+        <li>Échanges avec différents stagiaires en études supérieures.</li>
+        <li>
+          Présence lors d'une réunion pour les nouveaux employés concernant les
+          règlements de Thales.
+        </li>
+        <li>Participation à la fête du Travail chez Thales.</li>
       </ul>
     </div>
-    <div class="logos">
-      <div class="logos_anime">
-        <img src="..\images\language_logo\C.svg" alt="C" />
-        <img src="..\images\language_logo\C++.svg" alt="C++" />
-        <img src="..\images\language_logo\HTML.svg" alt="HTML" />
-        <img src="..\images\language_logo\CSS.svg" alt="CSS" />
-        <img src="..\images\language_logo\JavaScript.svg" alt="JavaScript" />
-        <img src="..\images\language_logo\Kotlin.svg" alt="Kotlin" />
-        <img src="..\images\language_logo\Python.svg" alt="Python" />
-      </div>
-      <div class="logos_anime">
-        <img src="..\images\language_logo\C.svg" alt="C" />
-        <img src="..\images\language_logo\C++.svg" alt="C++" />
-        <img src="..\images\language_logo\HTML.svg" alt="HTML" />
-        <img src="..\images\language_logo\CSS.svg" alt="CSS" />
-        <img src="..\images\language_logo\JavaScript.svg" alt="JavaScript" />
-        <img src="..\images\language_logo\Kotlin.svg" alt="Kotlin" />
-        <img src="..\images\language_logo\Python.svg" alt="Python" />
-      </div>
-      <div class="logos_anime">
-        <img src="..\images\language_logo\C.svg" alt="C" />
-        <img src="..\images\language_logo\C++.svg" alt="C++" />
-        <img src="..\images\language_logo\HTML.svg" alt="HTML" />
-        <img src="..\images\language_logo\CSS.svg" alt="CSS" />
-        <img src="..\images\language_logo\JavaScript.svg" alt="JavaScript" />
-        <img src="..\images\language_logo\Kotlin.svg" alt="Kotlin" />
-        <img src="..\images\language_logo\Python.svg" alt="Python" />
-      </div>
-    </div>
-    <div class="logos">
-      <div class="logos_anime">
-        <img src="..\images\app_logo\Visual_Studio.svg" alt="Visual_Studio" />
-        <img
-          src="..\images\app_logo\Visual_Studio_Code.svg"
-          alt="Visual_Studio_Code"
-        />
-        <img src="..\images\app_logo\Android_Studio.svg" alt="Android_Studio" />
-        <img src="..\images\app_logo\Godot.svg" alt="Godot" />
-        <img src="..\images\app_logo\Blender.svg" alt="Blender" />
-        <img src="..\images\app_logo\Krita.svg" alt="Krita" />
-      </div>
-      <div class="logos_anime">
-        <img src="..\images\app_logo\Visual_Studio.svg" alt="Visual_Studio" />
-        <img
-          src="..\images\app_logo\Visual_Studio_Code.svg"
-          alt="Visual_Studio_Code"
-        />
-        <img src="..\images\app_logo\Android_Studio.svg" alt="Android_Studio" />
-        <img src="..\images\app_logo\Godot.svg" alt="Godot" />
-        <img src="..\images\app_logo\Blender.svg" alt="Blender" />
-        <img src="..\images\app_logo\Krita.svg" alt="Krita" />
-      </div>
-      <div class="logos_anime">
-        <img src="..\images\app_logo\Visual_Studio.svg" alt="Visual_Studio" />
-        <img
-          src="..\images\app_logo\Visual_Studio_Code.svg"
-          alt="Visual_Studio_Code"
-        />
-        <img src="..\images\app_logo\Android_Studio.svg" alt="Android_Studio" />
-        <img src="..\images\app_logo\Godot.svg" alt="Godot" />
-        <img src="..\images\app_logo\Blender.svg" alt="Blender" />
-        <img src="..\images\app_logo\Krita.svg" alt="Krita" />
-      </div>
-    </div>
-    <div class="boîte1">
-      <figure>
-        <img
-          src="..\images\3D_renders\Coco_Goat_Milk_Bottle_1.png"
-          alt="Coco Goat Milk Bottle"
-        />
-        <figcaption>Ah ok</figcaption>
-      </figure>
-      <h1>Coco Goat Milk Bottle</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper nec
-        lacus ac pellentesque. Curabitur massa magna, tincidunt ac efficitur
-        facilisis, consectetur vitae orci. Nunc interdum tortor metus, in mattis
-        justo maximus eu. In id hendrerit mi. Vivamus maximus fringilla pretium.
-        Aenean non nisi nibh. Donec porta magna purus, non pharetra lectus
-        semper et. Vivamus in libero metus. In ac tortor malesuada, tincidunt
-        nibh eu, lacinia urna. Etiam in aliquam mi. Morbi gravida sapien sem.
-        Curabitur euismod sodales orci eget laoreet. Praesent vel tortor risus.
-        Integer hendrerit lobortis ligula, a viverra elit aliquam quis. Vivamus
-        facilisis congue libero eget auctor.
-      </p>
-    </div>
-    <div class="boîte1">
-      <figure>
-        <img
-          src="..\images\3D_renders\Coco_Goat_Milk_Bottle_1.png"
-          alt="Coco Goat Milk Bottle"
-        />
-        <figcaption>Ah ok</figcaption>
-      </figure>
-      <h1>Coco Goat Milk Bottle</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper nec
-        lacus ac pellentesque. Curabitur massa magna, tincidunt ac efficitur
-        facilisis, consectetur vitae orci. Nunc interdum tortor metus, in mattis
-        justo maximus eu. In id hendrerit mi. Vivamus maximus fringilla pretium.
-        Aenean non nisi nibh. Donec porta magna purus, non pharetra lectus
-        semper et. Vivamus in libero metus. In ac tortor malesuada, tincidunt
-        nibh eu, lacinia urna. Etiam in aliquam mi. Morbi gravida sapien sem.
-        Curabitur euismod sodales orci eget laoreet. Praesent vel tortor risus.
-        Integer hendrerit lobortis ligula, a viverra elit aliquam quis. Vivamus
-        facilisis congue libero eget auctor.
-      </p>
-    </div>
-    <div class="boîte1">
-      <figure>
-        <img
-          src="..\images\3D_renders\Coco_Goat_Milk_Bottle_1.png"
-          alt="Coco Goat Milk Bottle"
-        />
-        <figcaption>Ah ok</figcaption>
-      </figure>
-      <h1>Coco Goat Milk Bottle</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc semper nec
-        lacus ac pellentesque. Curabitur massa magna, tincidunt ac efficitur
-        facilisis, consectetur vitae orci. Nunc interdum tortor metus, in mattis
-        justo maximus eu. In id hendrerit mi. Vivamus maximus fringilla pretium.
-        Aenean non nisi nibh. Donec porta magna purus, non pharetra lectus
-        semper et. Vivamus in libero metus. In ac tortor malesuada, tincidunt
-        nibh eu, lacinia urna. Etiam in aliquam mi. Morbi gravida sapien sem.
-        Curabitur euismod sodales orci eget laoreet. Praesent vel tortor risus.
-        Integer hendrerit lobortis ligula, a viverra elit aliquam quis. Vivamus
-        facilisis congue libero eget auctor.
-      </p>
+    <div class="boite3">
+      <h1>Centres d’intérêts</h1>
+      <ul>
+        <li>Passion pour la programmation informatique.</li>
+        <li>Suivi attentif des avancées technologiques.</li>
+        <li>Expérimentation avec diverses distributions Linux.</li>
+        <li>Création de sites web, d’application Android et de jeux vidéo.</li>
+        <li>
+          Exploration de logiciels en open source, principalement sur GitHub.
+        </li>
+        <li>Vif intérêt pour la culture japonaise et orientale.</li>
+        <li>Pratique des activités sportives pour me détendre.</li>
+      </ul>
     </div>
     <footer>
       <div class="horizontal1">
@@ -193,6 +181,6 @@
         >.
       </div>
     </footer>
-    <script type="text/javascript" src="..\script.js"></script>
+    <script type="text/javascript" src="..\js\script.js"></script>
   </body>
 </html>

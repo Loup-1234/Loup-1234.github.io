@@ -5,31 +5,31 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="..\style.css" />
+    <link rel="stylesheet" href="..\css\couleurs\cyan_light.css" />
+    <link rel="stylesheet" href="..\css\couleurs\cyan_dark.css" />
+    <link rel="stylesheet" href="..\css\style.css" />
     <link rel="icon" href="..\images\Icon.ico" alt="Photo de profil Github" />
   </head>
   <body>
-    <div class="theme">
-      <button
-        id="theme-toggle"
-        class="btn btn-link btn-sm ml-2 small"
-        type="button"
-      >
-        <img src="..\images\brush.svg" alt="Un pinceau" />
-      </button>
-    </div>
     <header>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a class="active" href="projects.html">Projects</a></li>
-      </ul>
+      <div class="theme">
+        <button id="bouton-theme" type="button">
+          <img src="..\images\Brush.svg" alt="Un pinceau" />
+        </button>
+      </div>
+      <div class="bar-de-navigation">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+      <div class="lang">
+        <ul>
+          <li><a onclick="fr()">FR</a></li>
+          <li><a class="active" onclick="en()">EN</a></li>
+        </ul>
+      </div>
     </header>
-    <div class="lang">
-      <ul>
-        <li><a onclick="fr()">FR</a></li>
-        <li><a class="active" onclick="en()">EN</a></li>
-      </ul>
-    </div>
     <h1>GitHub projects</h1>
     <div class="horizontal2">
       <a
@@ -73,7 +73,7 @@
         href="https://www.instagram.com/loup.1234/p/CZmv7BoL9vo"
         target="”_blank”"
       >
-        <img src="..\images\3D_renders\untitled.png" alt="Sans titre" />
+        <img src="..\images\3D_renders\Untitled.png" alt="Sans titre" />
         No Title
       </a>
       <a
@@ -164,6 +164,6 @@
         >.
       </div>
     </footer>
-    <script type="text/javascript" src="..\script.js"></script>
+    <script type="text/javascript" src="..\js\script.js"></script>
   </body>
 </html>
