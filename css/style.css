@@ -43,7 +43,7 @@ img {
 
 /****** en-tête ******/
 
-/*** bouton thème ***/
+/*** bouton thème et couleurs ***/
 
 header {
   z-index: 2;
@@ -84,10 +84,16 @@ header {
   padding: 14px 16px;
 
   cursor: pointer;
+
+  transition: background-color ease-in-out 0.2s;
 }
+
+/*animer au sur-vol*/
 
 .theme button:hover {
   background-color: var(--md-sys-color-inverse-primary);
+
+  transition: background-color ease-in-out 0.2s;
 }
 
 /*** bar de navigation ***/
@@ -135,15 +141,23 @@ header li a {
   color: var(--md-sys-color-on-background);
   text-align: center;
   text-decoration: none;
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
-/*au sur-vol du boutton et lorsque le boutton est actif*/
+/*animer au sur-vol du boutton et lorsque le boutton est actif*/
 
 header li a:hover,
 .active {
   background-color: var(--md-sys-color-primary-container);
 
   color: var(--md-sys-color-on-primary-container);
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+}
+
+.active {
+  cursor: default;
 }
 
 /*** bouton langue ***/
@@ -376,7 +390,8 @@ footer .social-icon {
   margin: 7px;
   padding: 7px;
 
-  transition: padding ease-in-out 0.2s;
+  transition: padding ease-in-out 0.2s, background-color ease-in-out 0.2s,
+    color ease-in-out 0.2s;
 }
 
 /*animer au sur-vol*/
@@ -386,7 +401,8 @@ footer .social-icon:hover {
 
   padding: 11px;
 
-  transition: padding ease-in-out 0.2s;
+  transition: padding ease-in-out 0.2s, background-color ease-in-out 0.2s,
+    color ease-in-out 0.2s;
 }
 
 footer div a {
