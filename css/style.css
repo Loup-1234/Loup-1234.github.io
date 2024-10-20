@@ -67,7 +67,7 @@ header {
   margin: 16px;
 }
 
-.theme img {
+.theme svg {
   width: 25px;
   height: 25px;
 }
@@ -361,7 +361,7 @@ footer {
   text-align: center;
 }
 
-footer img {
+footer svg {
   width: 25px;
 
   padding: 7px;
@@ -382,7 +382,7 @@ footer .social-icon {
 /*animer au sur-vol*/
 
 footer .social-icon:hover {
-  background-color: var(--md-sys-color-primary-fixed-dim);
+  background-color: var(--md-sys-color-inverse-primary);
 
   padding: 11px;
 
@@ -396,7 +396,7 @@ footer div a {
 }
 
 footer div a:hover {
-  color: var(--md-sys-color-primary-fixed-dim);
+  color: var(--md-sys-color-inverse-primary);
 }
 
 /****** cartes ******/
