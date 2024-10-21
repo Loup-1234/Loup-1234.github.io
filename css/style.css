@@ -431,10 +431,14 @@ footer div a {
   color: var(--text);
   text-decoration: none;
   font-weight: bold;
+
+  transition: color ease-in-out 0.2s;
 }
 
 footer div a:hover {
   color: var(--md-sys-color-inverse-primary);
+
+  transition: color ease-in-out 0.2s;
 }
 
 /****** cartes ******/
@@ -456,11 +460,15 @@ footer div a:hover {
   color: var(--md-sys-color-on-background);
   text-decoration: none;
   font-weight: bold;
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
 .carte:hover {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
+
+  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
 
 .carte img {
