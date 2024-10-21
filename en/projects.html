@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="icon" href="../images/Icon.ico" />
   </head>
+
   <body>
     <header>
       <div class="theme">
-        <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
-
         <button
           aria-label="Theme Button"
           id="bouton-theme"
@@ -21,6 +20,7 @@
         ></button>
 
         <button aria-label="Colors Button" type="button" onclick="couleurs()">
+          <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path
               d="M8 3C5.79 3 4 4.79 4 7V14C4 15.1 4.9 16 6 16H9V20C9 21.1 9.9 22 11 22H13C14.1 22 15 21.1 15 20V16H18C19.1 16 20 15.1 20 14V3H8M8 5H12V7H14V5H15V9H17V5H18V10H6V7C6 5.9 6.9 5 8 5M6 14V12H18V14H6Z"
@@ -42,6 +42,7 @@
         </ul>
       </div>
     </header>
+
     <h1>GitHub projects</h1>
     <div class="horizontal2">
       <a
@@ -55,6 +56,7 @@
         />
         An Other Manga App
       </a>
+
       <a
         class="carte"
         href="https://github.com/Loup-1234/Button"
@@ -66,6 +68,7 @@
         />
         Button
       </a>
+
       <a
         class="carte"
         href="https://github.com/Loup-1234/Loup-1234.github.io"
@@ -78,6 +81,7 @@
         Loup-1234.github.io
       </a>
     </div>
+
     <h1>Blender projects</h1>
     <div class="horizontal2">
       <a
@@ -88,6 +92,7 @@
         <img src="../images/3D_renders/Untitled.png" alt="Sans titre" />
         No Title
       </a>
+
       <a
         class="carte"
         href="https://www.youtube.com/watch?v=zpWpSx5VUuQ"
@@ -96,6 +101,7 @@
         <img src="../images/3D_renders/Lumine.png" alt="Lumine" />
         Lumine「Miki Miki ★ Romantic Night」【Vocaloid MMD】
       </a>
+
       <a
         class="carte"
         href="https://www.youtube.com/watch?v=Nd33Jw1Pdmo&t"
@@ -108,6 +114,7 @@
         The Coco Goat Milk Bottle & The Coconut Song
       </a>
     </div>
+
     <h1>My drawings</h1>
     <div class="horizontal2">
       <a
@@ -118,6 +125,7 @@
         <img src="../images/drawing/Asta.jpg" alt="Asta" />
         Asta
       </a>
+
       <a
         class="carte"
         href="https://www.instagram.com/loup.1234/p/CVXPaXPjV9E"
@@ -126,6 +134,7 @@
         <img src="../images/drawing/Gawr_Gura.jpg" alt="Gawr Gura" />
         Gawr Gura
       </a>
+
       <a
         class="carte"
         href="https://www.instagram.com/loup.1234/p/Ces_QLvr6Nj"
@@ -134,6 +143,7 @@
         <img src="../images/drawing/Momosuzu_Nene.jpg" alt="Momosuzu Nene" />
         Momosuzu Nene
       </a>
+
       <a
         class="carte"
         href="https://www.instagram.com/loup.1234/p/CexpESBskem"
@@ -143,13 +153,14 @@
         Eri
       </a>
     </div>
+
     <footer>
       <div class="horizontal1">
         <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
 
         <a href="mailto:alainhumeaubui@gmail.com" aria-label="Email"
           ><div class="social-icon">
-            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <?xml version="1.0" encoding="utf-8"?>
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -366,11 +377,16 @@
         >.
       </div>
     </footer>
-    <!--Les couleurs-->
+
+    <!--les liens vers les fichiers de couleurs sont dans le balise "body" pace qu'on ne peut pas avoir de balise "div" dans le balise "head"-->
+
     <div id="div-couleurs">
       <link rel="stylesheet" href="../css/couleurs/cyan_light.css" />
       <link rel="stylesheet" href="../css/couleurs/cyan_dark.css" />
     </div>
+
+    <!--le lien vers le fichier "script" est dans le balise "body" pour exécuter le ficher au chargement de la page-->
+
     <script type="text/javascript" src="../js/script.js"></script>
   </body>
 </html>

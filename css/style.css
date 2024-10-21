@@ -1,8 +1,16 @@
 body {
+  /*
+  "flex" permet de créer des zones avec des largeurs prédéfinis,
+  de faire respecter les positions dans l'axe Z
+  et bien plus encore
+  */
+
   display: flex;
   flex-direction: column;
 
   background-color: var(--md-sys-color-surface);
+
+  /* initialiser une hauteur minimal permet de forcer la balise "pied de page" à être en fin de page */
 
   min-height: 110vh;
 
@@ -463,6 +471,8 @@ footer div a:hover {
 
   transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
 }
+
+/*animer au sur-vol*/
 
 .carte:hover {
   background-color: var(--md-sys-color-primary-container);

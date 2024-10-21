@@ -10,6 +10,7 @@
     <link rel="icon" href="../images/Icon.ico" />
 
     <!--Chargement de la police "Charm"-->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,11 +18,10 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
     <header>
       <div class="theme">
-        <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
-
         <button
           aria-label="Theme Button"
           id="bouton-theme"
@@ -29,6 +29,7 @@
         ></button>
 
         <button aria-label="Colors Button" type="button" onclick="couleurs()">
+          <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <path
               d="M8 3C5.79 3 4 4.79 4 7V14C4 15.1 4.9 16 6 16H9V20C9 21.1 9.9 22 11 22H13C14.1 22 15 21.1 15 20V16H18C19.1 16 20 15.1 20 14V3H8M8 5H12V7H14V5H15V9H17V5H18V10H6V7C6 5.9 6.9 5 8 5M6 14V12H18V14H6Z"
@@ -50,13 +51,16 @@
         </ul>
       </div>
     </header>
+
     <div class="boite1">
       <h1>Alain Humeau</h1>
       <h2>alias Loup_1234</h2>
     </div>
+
     <div>
       <div class="boite2">
         <h1>Profile</h1>
+
         <p>
           Passionate about programming, I am currently studying for an advanced
           technician's certificate in Cybersecurity, Computing and Networks at
@@ -68,8 +72,10 @@
           discover new and strengthen my skills.
         </p>
       </div>
+
       <div class="boite3">
         <h1>Interests</h1>
+
         <ul>
           <li>Passion for programming.</li>
           <li>Keeping abreast of technological advances.</li>
@@ -81,8 +87,10 @@
         </ul>
       </div>
     </div>
+
     <div class="pc-uniquement">
       <h1>Programming language I use</h1>
+
       <div class="logos">
         <div class="logos_anime">
           <img src="../images/language_logo/C.svg" alt="C" />
@@ -112,7 +120,9 @@
           <img src="../images/language_logo/Python.svg" alt="Python" />
         </div>
       </div>
+
       <h1>Software I use</h1>
+
       <div class="logos">
         <div class="logos_anime">
           <img src="../images/app_logo/Visual_Studio.svg" alt="Visual_Studio" />
@@ -158,8 +168,10 @@
         </div>
       </div>
     </div>
+
     <div class="boite4">
       <h1>Internship at Thales</h1>
+
       <ul>
         <li>
           In Cholet (49), at a company specializing in military communications
@@ -170,6 +182,7 @@
         <li>Attended a meeting for new employees on Thales regulations.</li>
         <li>Presence at the Thales Labor Day.</li>
       </ul>
+      
       <figure>
         <img
           src="../images/photos/Rapport_De_Stage.jpg"
@@ -178,13 +191,14 @@
         <figcaption>My internship report</figcaption>
       </figure>
     </div>
+
     <footer>
       <div class="horizontal1">
         <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
 
         <a href="mailto:alainhumeaubui@gmail.com" aria-label="Email"
           ><div class="social-icon">
-            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <?xml version="1.0" encoding="utf-8"?>
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -401,11 +415,16 @@
         >.
       </div>
     </footer>
-    <!--Les couleurs-->
+
+    <!--les liens vers les fichiers de couleurs sont dans le balise "body" pace qu'on ne peut pas avoir de balise "div" dans le balise "head"-->
+
     <div id="div-couleurs">
       <link rel="stylesheet" href="../css/couleurs/cyan_light.css" />
       <link rel="stylesheet" href="../css/couleurs/cyan_dark.css" />
     </div>
+
+    <!--le lien vers le fichier "script" est dans le balise "body" pour exécuter le ficher au chargement de la page-->
+
     <script type="text/javascript" src="../js/script.js"></script>
   </body>
 </html>
