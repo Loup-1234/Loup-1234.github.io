@@ -261,7 +261,6 @@ header li a:hover,
   z-index: 1;
   float: left;
 
-  margin: 24px 0;
   margin-bottom: 48px;
 }
 
@@ -372,6 +371,8 @@ header li a:hover,
 
 .logos_anime {
   display: inline-block;
+
+  margin: 16px 0;
 
   animation: 35s slide infinite linear;
 }
@@ -519,6 +520,10 @@ footer div a:hover {
     width: 90%;
   }
 
+  .boite4 {
+    margin-top: 24px;
+  }
+
   .boite4 ul {
     width: 90%;
   }
@@ -527,6 +532,8 @@ footer div a:hover {
     float: left;
 
     width: 100%;
+
+    margin-top: 16px;
   }
 
   .pc-uniquement {
