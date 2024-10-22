@@ -1,3 +1,6 @@
 # This is my portfolio website
-- Contains hover animations.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+- It has a French and an English version.
+- It contains hover animations.
+- It contains light and dark theme.
+- It contains dynamic color schemes build using [Google Material Theme Builder](https://m3.material.io/styles/color/resources) and [Apple colors](https://developer.apple.com/design/human-interface-guidelines/color).
+- It is compatible with all mobile devices.
