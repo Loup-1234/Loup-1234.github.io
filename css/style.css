@@ -113,7 +113,7 @@ header {
 /*animer au sur-vol*/
 
 .theme button:hover {
-  filter: grayscale(45%);
+  filter: contrast(80%) hue-rotate(25deg);
 
   transition: filter ease-in-out 0.2s;
 }
@@ -431,7 +431,7 @@ footer .social-icon {
 /*animer au sur-vol*/
 
 footer .social-icon:hover {
-  filter: grayscale(45%);
+  filter: contrast(80%) hue-rotate(25deg);
 
   transition: filter ease-in-out 0.2s;
 }
