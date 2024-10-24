@@ -106,15 +106,15 @@ header {
 
   cursor: pointer;
 
-  transition: background-color ease-in-out 0.2s;
+  transition: filter ease-in-out 0.2s;
 }
 
 /*animer au sur-vol*/
 
 .theme button:hover {
-  background-color: var(--md-sys-color-tertiary-container);
+  filter: grayscale(50%);
 
-  transition: background-color ease-in-out 0.2s;
+  transition: filter ease-in-out 0.2s;
 }
 
 /*** bar de navigation ***/
@@ -424,15 +424,15 @@ footer .social-icon {
   margin: 7px;
   padding: 7px;
 
-  transition: background-color ease-in-out 0.2s;
+  transition: filter ease-in-out 0.2s;
 }
 
 /*animer au sur-vol*/
 
 footer .social-icon:hover {
-  background-color: var(--md-sys-color-tertiary-container);
+  filter: grayscale(50%);
 
-  transition: background-color ease-in-out 0.2s;
+  transition: filter ease-in-out 0.2s;
 }
 
 footer div a {
