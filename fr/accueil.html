@@ -1,3 +1,5 @@
+<!--Source des SVG : https://pictogrammers.com-->
+
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
   <head>
@@ -31,12 +33,20 @@
         <button aria-label="Bouton Couleurs" type="button" onclick="couleurs()">
           <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>palette</title>
             <path
-              d="M8 3C5.79 3 4 4.79 4 7V14C4 15.1 4.9 16 6 16H9V20C9 21.1 9.9 22 11 22H13C14.1 22 15 21.1 15 20V16H18C19.1 16 20 15.1 20 14V3H8M8 5H12V7H14V5H15V9H17V5H18V10H6V7C6 5.9 6.9 5 8 5M6 14V12H18V14H6Z"
-              fill="var(--md-sys-color-on-background)"
+              d="M17.5,12A1.5,1.5 0 0,1 16,10.5A1.5,1.5 0 0,1 17.5,9A1.5,1.5 0 0,1 19,10.5A1.5,1.5 0 0,1 17.5,12M14.5,8A1.5,1.5 0 0,1 13,6.5A1.5,1.5 0 0,1 14.5,5A1.5,1.5 0 0,1 16,6.5A1.5,1.5 0 0,1 14.5,8M9.5,8A1.5,1.5 0 0,1 8,6.5A1.5,1.5 0 0,1 9.5,5A1.5,1.5 0 0,1 11,6.5A1.5,1.5 0 0,1 9.5,8M6.5,12A1.5,1.5 0 0,1 5,10.5A1.5,1.5 0 0,1 6.5,9A1.5,1.5 0 0,1 8,10.5A1.5,1.5 0 0,1 6.5,12M12,3A9,9 0 0,0 3,12A9,9 0 0,0 12,21A1.5,1.5 0 0,0 13.5,19.5C13.5,19.11 13.35,18.76 13.11,18.5C12.88,18.23 12.73,17.88 12.73,17.5A1.5,1.5 0 0,1 14.23,16H16A5,5 0 0,0 21,11C21,6.58 16.97,3 12,3Z"
+              fill="var(--md-sys-color-on-primary-container)"
             />
           </svg>
         </button>
+
+        <button
+          aria-label="Bouton Daltonien"
+          id="bouton-daltonien"
+          type="button"
+          onclick="daltonien()"
+        ></button>
       </div>
       <div class="bar-de-navigation">
         <ul>
@@ -201,33 +211,15 @@
     </div>
 
     <footer>
-      <div class="horizontal1">
-        <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
-
+      <div class="horizontal2">
         <a href="mailto:alainhumeaubui@gmail.com" aria-label="Email"
           ><div class="social-icon">
-            <?xml version="1.0" encoding="utf-8"?>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>email</title>
               <path
-                d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
-                stroke="var(--md-sys-color-on-background)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <rect
-                x="3"
-                y="5"
-                width="18"
-                height="14"
-                rx="2"
-                stroke="var(--md-sys-color-on-background)"
-                stroke-width="2"
-                stroke-linecap="round"
+                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+                fill="var(--md-sys-color-on-primary-container)"
               />
             </svg></div
         ></a>
@@ -238,17 +230,12 @@
           target="”_blank”"
         >
           <div class="social-icon">
-            <svg
-              viewBox="0 0 1024 1024"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>github</title>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-                transform="scale(64)"
-                fill="var(--md-sys-color-on-background)"
+                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"
+                fill="var(--md-sys-color-on-primary-container)"
               />
             </svg></div
         ></a>
@@ -259,24 +246,13 @@
           target="”_blank”"
         >
           <div class="social-icon">
-            <?xml version="1.0" encoding="iso-8859-1"?>
-            <svg
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 461.001 461.001"
-              xml:space="preserve"
-            >
-              <g>
-                <path
-                  d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728
-		c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137
-		C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607
-		c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"
-                  fill="var(--md-sys-color-on-background)"
-                />
-              </g>
+            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>youtube</title>
+              <path
+                d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"
+                fill="var(--md-sys-color-on-primary-container)"
+              />
             </svg></div
         ></a>
 
@@ -286,133 +262,29 @@
           target="”_blank”"
         >
           <div class="social-icon">
-            <svg
-              version="1.1"
-              id="Layer_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 551.034 551.034"
-              xml:space="preserve"
-              fill="#171923"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <g id="XMLID_13_">
-                  <linearGradient
-                    id="XMLID_2_"
-                    gradientUnits="userSpaceOnUse"
-                    x1="275.517"
-                    y1="4.5714"
-                    x2="275.517"
-                    y2="549.7202"
-                    gradientTransform="matrix(1 0 0 -1 0 554)"
-                  >
-                    <stop
-                      offset="0"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="0.3"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="0.6"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="1"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                  </linearGradient>
-                  <path
-                    id="XMLID_17_"
-                    style="fill: url(#XMLID_2_)"
-                    d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722 c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156 C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156 c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722 c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"
-                  ></path>
-                  <linearGradient
-                    id="XMLID_3_"
-                    gradientUnits="userSpaceOnUse"
-                    x1="275.517"
-                    y1="4.5714"
-                    x2="275.517"
-                    y2="549.7202"
-                    gradientTransform="matrix(1 0 0 -1 0 554)"
-                  >
-                    <stop
-                      offset="0"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="0.3"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="0.6"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="1"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                  </linearGradient>
-                  <path
-                    id="XMLID_81_"
-                    style="fill: url(#XMLID_3_)"
-                    d="M275.517,133C196.933,133,133,196.933,133,275.516 s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6 c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083 C362.6,323.611,323.611,362.6,275.517,362.6z"
-                  ></path>
-                  <linearGradient
-                    id="XMLID_4_"
-                    gradientUnits="userSpaceOnUse"
-                    x1="418.306"
-                    y1="4.5714"
-                    x2="418.306"
-                    y2="549.7202"
-                    gradientTransform="matrix(1 0 0 -1 0 554)"
-                  >
-                    <stop
-                      offset="0"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="0.3"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="0.6"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                    <stop
-                      offset="1"
-                      style="stop-color: var(--md-sys-color-on-background)"
-                    ></stop>
-                  </linearGradient>
-                  <circle
-                    id="XMLID_83_"
-                    style="fill: url(#XMLID_4_)"
-                    cx="418.306"
-                    cy="134.072"
-                    r="34.149"
-                  ></circle>
-                </g>
-              </g>
+            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>instagram</title>
+              <path
+                d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                fill="var(--md-sys-color-on-primary-container)"
+              />
             </svg></div
         ></a>
 
         <a href="https://x.com/Loup_1234" aria-label="X" target="”_blank”">
           <div class="social-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280">
+            <!--Utiliser la bailse SVG me permet de modifier les couleurs dynamiquement en fonction du thème-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 462.799">
+              <title>x</title>
               <path
-                d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"
-                fill="var(--md-sys-color-on-background)"
+                d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
+                fill="var(--md-sys-color-on-primary-container)"
               />
             </svg></div
         ></a>
       </div>
+      
       <div>
         Ce site est placé sous la licence du
         <a

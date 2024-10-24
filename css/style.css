@@ -44,15 +44,6 @@ li {
 }
 
 .horizontal1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  margin-bottom: 8px;
-}
-
-.horizontal2 {
   display: grid;
   grid-template-columns: auto auto auto;
 
@@ -60,6 +51,15 @@ li {
   row-gap: 24px;
 
   margin-bottom: 24px;
+}
+
+.horizontal2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-bottom: 8px;
 }
 
 /****** en-tête ******/
@@ -112,7 +112,7 @@ header {
 /*animer au sur-vol*/
 
 .theme button:hover {
-  background-color: var(--md-sys-color-inverse-primary);
+  background-color: var(--md-sys-color-tertiary-container);
 
   transition: background-color ease-in-out 0.2s;
 }
@@ -424,15 +424,15 @@ footer .social-icon {
   margin: 7px;
   padding: 7px;
 
-  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
 }
 
 /*animer au sur-vol*/
 
 footer .social-icon:hover {
-  background-color: var(--md-sys-color-inverse-primary);
+  background-color: var(--md-sys-color-tertiary-container);
 
-  transition: background-color ease-in-out 0.2s, color ease-in-out 0.2s;
+  transition: background-color ease-in-out 0.2s;
 }
 
 footer div a {
@@ -444,7 +444,7 @@ footer div a {
 }
 
 footer div a:hover {
-  color: var(--md-sys-color-inverse-primary);
+  color: var(--md-sys-color-surface-tint);
 
   transition: color ease-in-out 0.2s;
 }
