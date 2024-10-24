@@ -74,14 +74,6 @@ document.getElementById("bouton-theme").onclick = function () {
 var couleursStocker = localStorage.getItem("couleurs-actuel");
 
 /*
-Si il y a une valeur dans la variable "couleursStocker",
-    Exécuter la fonction "couleurs()"
-*/
-if (couleursStocker) {
-  couleurs();
-}
-
-/*
 Si il y a une valeur dans la variable "couleursStocker" qui est égal à l'une des couleurs et la variable "daltonien" a une valeur,
     Remplacer le css dans la div "div-couleurs" avec la couleur selectionner et en fonction de la valeur de la variable "daltonien"
     Mettre "etat-stocker" sur la couleur suivante
@@ -92,7 +84,7 @@ Sinon
     Mettre "etat-actuel" sur la couleur actuel
 */
 function couleurs() {
-  var daltonien = localStorage.getItem("etat-stocker");
+  var daltonien = localStorage.getItem("etat-actuel");
 
   if (couleursStocker == "orange" && daltonien == "true") {
     document.getElementById("div-couleurs").innerHTML =
@@ -157,13 +149,9 @@ function couleurs() {
 
 /* Bouton daltonien */
 
-/* Chercher la valeur que l'on a stocker dans "etat-actuel" puis attribue la valeur à la variable "etatStocker" */
-var etatStocker = localStorage.getItem("etat-actuel");
+/* Chercher la valeur que l'on a stocker dans "etat-actuel" ou bien prendre pour valeur "false" puis attribue la valeur à la variable "etatStocker" */
+var etatStocker = localStorage.getItem("etat-actuel") || "false";
 
-/*
-Si il y a une valeur dans la variable "etatStocker",
-    Exécuter la fonction "daltonien()"
-*/
 if (etatStocker) {
   daltonien();
 }
@@ -177,44 +165,32 @@ Si "etatStocker" à pour valeur "false",
     Remplacer le SVG dans la div "bouton-daltonien" avec l'icone "eye-off"
     Mettre "etat-stocker" sur "false"
     Mettre "etat-actuel" sur "true"
-Sinon
-    Remplacer le SVG dans la div "bouton-daltonien" avec l'icone "eye-off"
-    Mettre "etat-stocker" sur "false"
-    Mettre "etat-actuel" sur "true"
 */
 function daltonien() {
   if (etatStocker == "true") {
     document.getElementById("bouton-daltonien").innerHTML =
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
-      "<title>eye</title>" +
-      '<path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"' +
+      "<title>eye-off</title>" +
+      '<path d="M11.83,9L15,12.16C15,12.11 15,12.05 15,12A3,3 0 0,0 12,9C11.94,9 11.89,9 11.83,9M7.53,9.8L9.08,11.35C9.03,11.56 9,11.77 9,12A3,3 0 0,0 12,15C12.22,15 12.44,14.97 12.65,14.92L14.2,16.47C13.53,16.8 12.79,17 12,17A5,5 0 0,1 7,12C7,11.21 7.2,10.47 7.53,9.8M2,4.27L4.28,6.55L4.73,7C3.08,8.3 1.78,10 1,12C2.73,16.39 7,19.5 12,19.5C13.55,19.5 15.03,19.2 16.38,18.66L16.81,19.08L19.73,22L21,20.73L3.27,3M12,7A5,5 0 0,1 17,12C17,12.64 16.87,13.26 16.64,13.82L19.57,16.75C21.07,15.5 22.27,13.86 23,12C21.27,7.61 17,4.5 12,4.5C10.6,4.5 9.26,4.75 8,5.2L10.17,7.35C10.74,7.13 11.35,7 12,7Z"' +
       'fill="var(--md-sys-color-on-primary-container)" /></svg>';
     localStorage.setItem("etat-stocker", "false");
     localStorage.setItem("etat-actuel", "true");
   } else if (etatStocker == "false") {
     document.getElementById("bouton-daltonien").innerHTML =
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
-      "<title>eye-off</title>" +
-      '<path d="M11.83,9L15,12.16C15,12.11 15,12.05 15,12A3,3 0 0,0 12,9C11.94,9 11.89,9 11.83,9M7.53,9.8L9.08,11.35C9.03,11.56 9,11.77 9,12A3,3 0 0,0 12,15C12.22,15 12.44,14.97 12.65,14.92L14.2,16.47C13.53,16.8 12.79,17 12,17A5,5 0 0,1 7,12C7,11.21 7.2,10.47 7.53,9.8M2,4.27L4.28,6.55L4.73,7C3.08,8.3 1.78,10 1,12C2.73,16.39 7,19.5 12,19.5C13.55,19.5 15.03,19.2 16.38,18.66L16.81,19.08L19.73,22L21,20.73L3.27,3M12,7A5,5 0 0,1 17,12C17,12.64 16.87,13.26 16.64,13.82L19.57,16.75C21.07,15.5 22.27,13.86 23,12C21.27,7.61 17,4.5 12,4.5C10.6,4.5 9.26,4.75 8,5.2L10.17,7.35C10.74,7.13 11.35,7 12,7Z"' +
-      'fill="var(--md-sys-color-on-primary-container)" /></svg>';
-    localStorage.setItem("etat-stocker", "true");
-    localStorage.setItem("etat-actuel", "false");
-  } else {
-    document.getElementById("bouton-daltonien").innerHTML =
-      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
-      "<title>eye-off</title>" +
-      '<path d="M11.83,9L15,12.16C15,12.11 15,12.05 15,12A3,3 0 0,0 12,9C11.94,9 11.89,9 11.83,9M7.53,9.8L9.08,11.35C9.03,11.56 9,11.77 9,12A3,3 0 0,0 12,15C12.22,15 12.44,14.97 12.65,14.92L14.2,16.47C13.53,16.8 12.79,17 12,17A5,5 0 0,1 7,12C7,11.21 7.2,10.47 7.53,9.8M2,4.27L4.28,6.55L4.73,7C3.08,8.3 1.78,10 1,12C2.73,16.39 7,19.5 12,19.5C13.55,19.5 15.03,19.2 16.38,18.66L16.81,19.08L19.73,22L21,20.73L3.27,3M12,7A5,5 0 0,1 17,12C17,12.64 16.87,13.26 16.64,13.82L19.57,16.75C21.07,15.5 22.27,13.86 23,12C21.27,7.61 17,4.5 12,4.5C10.6,4.5 9.26,4.75 8,5.2L10.17,7.35C10.74,7.13 11.35,7 12,7Z"' +
+      "<title>eye</title>" +
+      '<path d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z"' +
       'fill="var(--md-sys-color-on-primary-container)" /></svg>';
     localStorage.setItem("etat-stocker", "true");
     localStorage.setItem("etat-actuel", "false");
   }
 
-  couleursStocker = localStorage.getItem("couleurs-actuel");
-  couleurs();
-
   etatStocker = localStorage.getItem("etat-stocker");
 
   console.log("Daltonien: " + localStorage.getItem("etat-actuel"));
+
+  couleursStocker = localStorage.getItem("couleurs-actuel");
+  couleurs();
 }
 
 /* Bouton langue */
