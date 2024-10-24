@@ -504,7 +504,7 @@ footer div a:hover {
 }
 
 @media (max-width: 1050px) {
-  .horizontal2 {
+  .horizontal1 {
     grid-template-columns: auto;
   }
 
