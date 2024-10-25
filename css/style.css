@@ -77,7 +77,6 @@ header {
   display: flex;
 
   position: fixed !important;
-  flex-direction: column;
 
   border-radius: 24px;
 
@@ -113,7 +112,7 @@ header {
 /*animer au sur-vol*/
 
 .theme button:hover {
-  filter: contrast(80%) hue-rotate(25deg);
+  filter: contrast(70%) hue-rotate(25deg);
 
   transition: filter ease-in-out 0.2s;
 }
@@ -157,7 +156,7 @@ header li a {
   border-radius: 16px;
 
   margin: 8px;
-  padding: 14px 16px;
+  padding: 21px 8px;
 
   cursor: pointer;
 
@@ -192,6 +191,10 @@ header li a:hover,
   right: 0;
 
   margin: 16px;
+}
+
+.lang li a {
+  padding: 21px;
 }
 
 /****** boîte1 ******/
@@ -431,7 +434,7 @@ footer .social-icon {
 /*animer au sur-vol*/
 
 footer .social-icon:hover {
-  filter: contrast(80%) hue-rotate(25deg);
+  filter: contrast(70%) hue-rotate(25deg);
 
   transition: filter ease-in-out 0.2s;
 }
