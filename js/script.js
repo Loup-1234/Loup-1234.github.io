@@ -208,7 +208,14 @@ function fr() {
   ) {
     window.location.href = "../fr/projets.html";
   } else {
-    window.location.href = "../fr/accueil.html";
+    if (
+      window.location.pathname == "/en/easter_egg.html" ||
+      window.location.pathname == "/fr/oeuf_de_paques.html"
+    ) {
+      window.location.href = "../fr/oeuf_de_paques.html";
+    } else {
+      window.location.href = "../fr/accueil.html";
+    }
   }
 }
 
@@ -225,6 +232,13 @@ function en() {
   ) {
     window.location.href = "../en/projects.html";
   } else {
-    window.location.href = "../en/home.html";
+    if (
+      window.location.pathname == "/fr/oeuf_de_paques.html" ||
+      window.location.pathname == "/en/easter_egg.html"
+    ) {
+      window.location.href = "../en/easter_egg.html";
+    } else {
+      window.location.href = "../en/home.html";
+    }
   }
 }
