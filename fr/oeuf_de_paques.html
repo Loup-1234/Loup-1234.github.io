@@ -62,11 +62,7 @@
       </div>
     </header>
 
-    <iframe
-      class="pc-uniquement"
-      src="../an_rpg_game/An RPG game.html"
-      title="An RPG game"
-    ></iframe>
+    <span id="oeuf" style="display: flex; flex-direction: column"></span>
 
     <footer>
       <div class="horizontal2">
@@ -154,15 +150,32 @@
       </div>
     </footer>
 
-    <!--les liens vers les fichiers de couleurs sont dans le balise "body" pace qu'on ne peut pas avoir de balise "div" dans le balise "head"-->
+    <!--les liens vers les fichiers de couleurs sont dans le balise "body" pace qu'on ne peut pas avoir de balise "span" dans le balise "head"-->
 
-    <div id="div-couleurs">
+    <span id="span-couleurs">
       <link rel="stylesheet" href="../css/couleurs/cyan_light.css" />
       <link rel="stylesheet" href="../css/couleurs/cyan_dark.css" />
-    </div>
+    </span>
 
     <!--le lien vers le fichier "script" est dans le balise "body" pour exécuter le ficher au chargement de la page-->
 
     <script type="text/javascript" src="../js/script.js"></script>
+    <script>
+      function isMobile() {
+        const regex =
+          /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
+      }
+
+      if (isMobile()) {
+        console.log("Mobile device detected");
+        document.getElementById("oeuf").innerHTML =
+          '<div class="boite1" style="font-size: larger; font-weight: bolder;">Veuillez utiliser un PC</div>';
+      } else {
+        console.log("Desktop device detected");
+        document.getElementById("oeuf").innerHTML =
+          '<iframe class="pc-uniquement" src="../an_rpg_game/An RPG game.html" title="An RPG game"></iframe>';
+      }
+    </script>
   </body>
 </html>

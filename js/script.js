@@ -75,11 +75,11 @@ var couleursStocker = localStorage.getItem("couleurs-actuel");
 
 /*
 Si il y a une valeur dans la variable "couleursStocker" qui est égal à l'une des couleurs et la variable "daltonien" a une valeur,
-    Remplacer le css dans la div "div-couleurs" avec la couleur selectionner et en fonction de la valeur de la variable "daltonien"
+    Remplacer le css dans la div "span-couleurs" avec la couleur selectionner et en fonction de la valeur de la variable "daltonien"
     Mettre "etat-stocker" sur la couleur suivante
     Mettre "etat-actuel" sur la couleur actuel
 Sinon
-    Remplacer le css dans la div "div-couleurs" avec la couleur "cyan" et en fonction de la valeur de la variable "daltonien"
+    Remplacer le css dans la div "span-couleurs" avec la couleur "cyan" et en fonction de la valeur de la variable "daltonien"
     Mettre "etat-stocker" sur la couleur suivante
     Mettre "etat-actuel" sur la couleur actuel
 */
@@ -87,55 +87,55 @@ function couleurs() {
   var daltonien = localStorage.getItem("etat-actuel");
 
   if (couleursStocker == "orange" && daltonien == "true") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/daltonien/orange_light_hc.css">' +
       '<link rel="stylesheet" href="../css/couleurs/daltonien/orange_dark_hc.css">';
     localStorage.setItem("couleurs-stocker", "cyan");
     localStorage.setItem("couleurs-actuel", "orange");
   } else if (couleursStocker == "orange" && daltonien == "false") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/orange_light.css">' +
       '<link rel="stylesheet" href="../css/couleurs/orange_dark.css">';
     localStorage.setItem("couleurs-stocker", "cyan");
     localStorage.setItem("couleurs-actuel", "orange");
   } else if (couleursStocker == "cyan" && daltonien == "true") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/daltonien/cyan_light_hc.css">' +
       '<link rel="stylesheet" href="../css/couleurs/daltonien/cyan_dark_hc.css">';
     localStorage.setItem("couleurs-stocker", "green");
     localStorage.setItem("couleurs-actuel", "cyan");
   } else if (couleursStocker == "cyan" && daltonien == "false") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/cyan_light.css">' +
       '<link rel="stylesheet" href="../css/couleurs/cyan_dark.css">';
     localStorage.setItem("couleurs-stocker", "green");
     localStorage.setItem("couleurs-actuel", "cyan");
   } else if (couleursStocker == "green" && daltonien == "true") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/daltonien/green_light_hc.css">' +
       '<link rel="stylesheet" href="../css/couleurs/daltonien/green_dark_hc.css">';
     localStorage.setItem("couleurs-stocker", "indigo");
     localStorage.setItem("couleurs-actuel", "green");
   } else if (couleursStocker == "green" && daltonien == "false") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/green_light.css">' +
       '<link rel="stylesheet" href="../css/couleurs/green_dark.css">';
     localStorage.setItem("couleurs-stocker", "indigo");
     localStorage.setItem("couleurs-actuel", "green");
   } else if (couleursStocker == "indigo" && daltonien == "true") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/daltonien/indigo_light_hc.css">' +
       '<link rel="stylesheet" href="../css/couleurs/daltonien/indigo_dark_hc.css">';
     localStorage.setItem("couleurs-stocker", "orange");
     localStorage.setItem("couleurs-actuel", "indigo");
   } else if (couleursStocker == "indigo" && daltonien == "false") {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/indigo_light.css">' +
       '<link rel="stylesheet" href="../css/couleurs/indigo_dark.css">';
     localStorage.setItem("couleurs-stocker", "orange");
     localStorage.setItem("couleurs-actuel", "indigo");
   } else {
-    document.getElementById("div-couleurs").innerHTML =
+    document.getElementById("span-couleurs").innerHTML =
       '<link rel="stylesheet" href="../css/couleurs/cyan_light.css">' +
       '<link rel="stylesheet" href="../css/couleurs/cyan_dark.css">';
     localStorage.setItem("couleurs-stocker", "green");

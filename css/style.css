@@ -32,12 +32,12 @@ img {
 
 iframe {
   border-radius: 24px;
-
+  border-style: solid;
   border-color: var(--md-sys-color-primary-container);
 
   height: 80vh;
 
-  margin: 16px;
+  margin-top: 16px;
 }
 
 p {
