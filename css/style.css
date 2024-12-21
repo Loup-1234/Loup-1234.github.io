@@ -207,6 +207,23 @@ header li a:hover,
   padding: 21px;
 }
 
+/*** linear gradient ***/
+
+.linear-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+
+  background: linear-gradient(
+    to bottom,
+    var(--md-sys-color-surface),
+    rgba(0, 0, 0, 0) 15%
+  );
+}
+
 /****** boîte1 ******/
 
 .boite1 {
