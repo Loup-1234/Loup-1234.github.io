@@ -77,7 +77,7 @@ li {
 /*** bouton thème et couleurs ***/
 
 header {
-  z-index: 2;
+  z-index: 3;
 
   font-size: 16px;
   font-weight: bold;
