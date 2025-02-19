@@ -67,7 +67,6 @@ li {
 
 /* Header */
 header {
-  z-index: 3;
   font-size: 16px;
   font-weight: bold;
 }
@@ -75,6 +74,7 @@ header {
 .theme,
 .navbar,
 .lang {
+  z-index: 3;
   display: grid;
   gap: 8px;
   position: fixed;
@@ -330,9 +330,11 @@ footer div a:hover {
 /* Media Queries */
 @media (max-width: 1400px) {
   .navbar {
-    left: 50%;
-    transform: translateX(-50%);
     width: 35%;
+  }
+  .box2 {
+    grid-template-columns: 100%;
+    grid-template-areas: "h1-1" "p" "h1-2" "ul";
   }
 }
 
@@ -340,20 +342,10 @@ footer div a:hover {
   body {
     padding: 100px 4% 0;
   }
-  .theme,
-  .lang {
-    display: none;
-  }
   .navbar {
-    left: 50%;
-    transform: translateX(-50%);
     width: 90%;
   }
   .box1 h1 {
     font-size: 90px;
-  }
-  .box2 {
-    grid-template-columns: 100%;
-    grid-template-areas: "h1-1" "p" "h1-2" "ul";
   }
 }
