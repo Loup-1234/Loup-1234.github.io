@@ -46,18 +46,14 @@
           onclick="colorBlind()"
         ></button>
       </div>
-      <div class="bar-de-navigation">
-        <ul>
-          <li><a class="active" href="accueil.html">Accueil</a></li>
-          <li><a href="projets.html">Projets</a></li>
-        </ul>
-      </div>
-      <div class="lang">
-        <ul>
-          <li><a class="active" onclick="fr()">FR</a></li>
-          <li><a onclick="en()">EN</a></li>
-        </ul>
-      </div>
+      <ul class="navbar">
+        <li><a class="active" href="accueil.html">Accueil</a></li>
+        <li><a href="projets.html">Projets</a></li>
+      </ul>
+      <ul class="lang">
+        <li><a class="active" onclick="fr()">FR</a></li>
+        <li><a onclick="en()">EN</a></li>
+      </ul>
     </header>
 
     <div class="linear-gradient"></div>
@@ -67,49 +63,43 @@
       <h2>alias Loup_1234</h2>
     </div>
 
-    <div>
-      <div class="box2">
-        <h1>Profil</h1>
+    <div class="box2">
+      <h1 style="grid-area: h1-1">Profil</h1>
 
-        <p>
-          Passionné par la programmation, je suis actuellement en BTS CIEL
-          (Cybersécurité, Informatique et réseaux, Electronique) option A
-          (Informatique et Réseaux) à Saint Gabriel à Saint Laurent sur
-          Sèvre.<br /><br />
-          Mon but est de renforcer mes compétences pour devenir un développeur
-          de sites web, de logiciels ou de jeux vidéos.<br /><br />
-          Pour rester à jour avec les dernières technologies, je mène des
-          projets personnels que je publie sur GitHub, ce qui me permet de
-          découvrir de nouvelles méthodes et de renforcer mes compétences.
-        </p>
-      </div>
+      <p style="grid-area: p">
+        Passionné par la programmation, je suis actuellement en BTS CIEL
+        (Cybersécurité, Informatique et réseaux, Electronique) option A
+        (Informatique et Réseaux) à Saint Gabriel à Saint Laurent sur Sèvre.<br /><br />
+        Mon but est de renforcer mes compétences pour devenir un développeur de
+        sites web, de logiciels ou de jeux vidéos.<br /><br />
+        Pour rester à jour avec les dernières technologies, je mène des projets
+        personnels que je publie sur GitHub, ce qui me permet de découvrir de
+        nouvelles méthodes et de renforcer mes compétences.
+      </p>
 
-      <div class="box3">
-        <h1>Centres d’intérêts</h1>
+      <h1 style="grid-area: h1-2">Centres d’intérêts</h1>
 
-        <ul>
-          <li>Passion pour la programmation informatique.</li>
-          <li>Suivi attentif des avancées technologiques.</li>
-          <li>Expérimentation avec diverses distributions Linux.</li>
-          <li>
-            Création de sites web, d’application Android et de jeux vidéo.
-          </li>
-          <li>
-            Exploration de logiciels en open source, principalement sur GitHub.
-          </li>
-          <li>Grand intérêt pour la culture japonaise et orientale.</li>
-          <li>Dessiner et faire du sport pour se détendre.</li>
-        </ul>
-      </div>
+      <ul style="grid-area: ul">
+        <li>Passion pour la programmation informatique.</li>
+        <li>Suivi attentif des avancées technologiques.</li>
+        <li>Expérimentation avec diverses distributions Linux.</li>
+        <li>Création de sites web, d’application Android et de jeux vidéo.</li>
+        <li>
+          Exploration de logiciels en open source, principalement sur GitHub.
+        </li>
+        <li>Grand intérêt pour la culture japonaise et orientale.</li>
+        <li>Dessiner et faire du sport pour se détendre.</li>
+      </ul>
     </div>
 
-    <div class="pc-uniquement">
+    <!-- <div class="pc-only">
       <h1>Les langages de programmation que j'utilise</h1>
 
       <div class="logos">
         <div class="logos_anime">
           <img src="../images/language_logo/C.svg" alt="C" />
           <img src="../images/language_logo/C++.svg" alt="C++" />
+          <img src="../images/language_logo/Rust.svg" alt="Rust" />
           <img src="../images/language_logo/HTML.svg" alt="HTML" />
           <img src="../images/language_logo/CSS.svg" alt="CSS" />
           <img src="../images/language_logo/JavaScript.svg" alt="JavaScript" />
@@ -119,6 +109,7 @@
         <div class="logos_anime">
           <img src="../images/language_logo/C.svg" alt="C" />
           <img src="../images/language_logo/C++.svg" alt="C++" />
+          <img src="../images/language_logo/Rust.svg" alt="Rust" />
           <img src="../images/language_logo/HTML.svg" alt="HTML" />
           <img src="../images/language_logo/CSS.svg" alt="CSS" />
           <img src="../images/language_logo/JavaScript.svg" alt="JavaScript" />
@@ -128,6 +119,7 @@
         <div class="logos_anime">
           <img src="../images/language_logo/C.svg" alt="C" />
           <img src="../images/language_logo/C++.svg" alt="C++" />
+          <img src="../images/language_logo/Rust.svg" alt="Rust" />
           <img src="../images/language_logo/HTML.svg" alt="HTML" />
           <img src="../images/language_logo/CSS.svg" alt="CSS" />
           <img src="../images/language_logo/JavaScript.svg" alt="JavaScript" />
@@ -182,12 +174,12 @@
           <img src="../images/app_logo/Krita.svg" alt="Krita" />
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="box4">
-      <h1>Stage découverte chez Thales</h1>
+    <!-- <div class="box3">
+      <h1 style="grid-area: h1">Stage découverte chez Thales</h1>
 
-      <ul>
+      <ul style="grid-area: ul">
         <li>
           À Cholet (49), au sein d'une entreprise spécialisée dans les
           équipements de communication militaire.
@@ -201,14 +193,14 @@
         <li>Présence à la fête du Travail chez Thales.</li>
       </ul>
 
-      <figure>
+      <figure style="grid-area: figure">
         <img
           src="../images/photos/Rapport_De_Stage.jpg"
           alt="Rapport de stage de chez Thales"
         />
         <figcaption>Mon rapport de stage</figcaption>
       </figure>
-    </div>
+    </div> -->
 
     <footer>
       <div class="horizontal2">
