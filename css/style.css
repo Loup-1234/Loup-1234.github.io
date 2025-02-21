@@ -339,6 +339,12 @@ footer div a:hover {
   }
 }
 
+@media (max-width: 1500px) and (max-height: 850px) {
+  .box1 h1 {
+    font-size: 90px;
+  }
+}
+
 @media (max-width: 800px) {
   body {
     padding: 100px 4% 0;
