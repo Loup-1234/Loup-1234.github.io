@@ -26,15 +26,23 @@ const projectsLink = lang === 'fr' ? '/projets' : '/en/projects';
     </div>
 
     <nav class="header-section center-nav">
-      <md-text-button href={homeLink} class={isHome ? "active-nav" : ""}>
+      
+      <md-text-button href={homeLink} class={`desktop-nav ${isHome ? "active-nav" : ""}`}>
         <md-icon slot="icon">home</md-icon>
         <span class="nav-label">{t('nav.home')}</span>
       </md-text-button>
+      <md-icon-button href={homeLink} class={`mobile-nav ${isHome ? "active-nav-mobile" : ""}`}>
+        <md-icon>home</md-icon>
+      </md-icon-button>
 
-      <md-text-button href={projectsLink} class={isProjets ? "active-nav" : ""}>
+      <md-text-button href={projectsLink} class={`desktop-nav ${isProjets ? "active-nav" : ""}`}>
         <md-icon slot="icon">work</md-icon>
         <span class="nav-label">{t('nav.projects')}</span>
       </md-text-button>
+      <md-icon-button href={projectsLink} class={`mobile-nav ${isProjets ? "active-nav-mobile" : ""}`}>
+        <md-icon>work</md-icon>
+      </md-icon-button>
+
     </nav>
 
     <div class="header-section lang-nav">
@@ -95,6 +103,19 @@ const projectsLink = lang === 'fr' ? '/projets' : '/en/projects';
     --md-text-button-icon-color: var(--md-sys-color-on-secondary-container);
   }
 
+  .mobile-nav {
+    display: none;
+  }
+
+  .active-nav-mobile {
+    background-color: var(--md-sys-color-secondary-container);
+    
+    border-radius: 50%;
+    
+    --md-icon-button-icon-color: var(--md-sys-color-on-secondary-container);
+    --md-icon-button-hover-icon-color: var(--md-sys-color-on-secondary-container);
+  }
+
   .lang-btn {
     min-width: 48px;
     padding: 0;
@@ -115,6 +136,25 @@ const projectsLink = lang === 'fr' ? '/projets' : '/en/projects';
     height: 40px;
     padding: 0;
     --md-text-button-container-shape: 50%;
+  }
+
+  @media (max-width: 800px) {
+    .m3-floating-header {
+      width: 85%;
+      padding: 8px;
+      gap: 4px;
+    }
+    
+    .desktop-nav {
+      display: none;
+    }
+    .mobile-nav {
+      display: flex;
+    }
+
+    .tools md-icon-button {
+      transform: scale(0.9);
+    }
   }
 </style>
 
