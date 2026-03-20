@@ -1,4 +1,5 @@
 # Welcome to My Portfolio Website!
+
 - **Bilingual Experience:** Available in both French and English.
 - **Interactive Design:** Features engaging hover animations.
 - **Theme Flexibility:** Offers both light and dark themes.

@@ -1,0 +1,32 @@
+---
+// src/pages/en/projects.astro
+import Layout from '../../layouts/Layout.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+---
+
+<Layout title="Projects" lang="en">
+  
+  <h2 class="category-title">On GitHub</h2>
+  <div class="card-grid">
+    <ProjectCard title="Chat through the pipe" link="https://github.com/Loup-1234/chatThroughThePipe" image="/image/screenshot/508578971-683f909f-db19-42db-ba42-3459ed37b4fe.png" />
+    <ProjectCard title="The dice roller" link="https://github.com/Loup-1234/The-dice-roller" image="/image/screenshot/Capture d'écran 2025-03-09 161900.png" />
+    <ProjectCard title="Let's Go Gamblin" link="https://github.com/Loup-1234/Let-s-Go-Gambling" image="/image/screenshot/Screenshot_20241116_153139.png" />
+    <ProjectCard title="Loup-1234.github.io" link="https://github.com/Loup-1234/Loup-1234.github.io" image="/image/screenshot/Screenshot_19-10-2024_12442_192.168.0.41.jpeg" />
+    <ProjectCard title="Button" link="https://github.com/Loup-1234/Button" image="/image/screenshot/Screenshot_20241019-115142_Button.jpg" />
+    <ProjectCard title="An Other Manga App" link="https://github.com/Loup-1234/An-Other-Manga-App" image="/image/screenshot/Screenshot_20241019-115127_An Other Manga App.jpg" />
+  </div>
+
+  <h2 class="category-title">Drawings</h2>
+  <div class="card-grid">
+    <ProjectCard title="Eri" link="https://www.instagram.com/loup.1234/p/CexpESBskem" image="/image/drawing/Eri.jpg" />
+    <ProjectCard title="Gawr Gura" link="https://www.instagram.com/loup.1234/p/CVXPaXPjV9E" image="/image/drawing/Gawr_Gura.jpg" />
+    <ProjectCard title="Momosuzu Nene" link="https://www.instagram.com/loup.1234/p/Ces_QLvr6Nj" image="/image/drawing/Momosuzu_Nene.jpg" />
+    <ProjectCard title="Asta" link="https://www.instagram.com/loup.1234/p/CT_02wAMdz0" image="/image/drawing/Asta.jpg" />
+  </div>
+  
+</Layout>
+
+<style>
+  .category-title { margin-top: 48px; color: var(--md-sys-color-primary); }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+</style>

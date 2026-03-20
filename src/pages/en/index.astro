@@ -1,0 +1,51 @@
+---
+// src/pages/en/index.astro
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Home" lang="en">
+  <div class="hero">
+    <h1 class="charm-font">Alain Humeau</h1>
+    <h2>aka Loup_1234</h2>
+  </div>
+
+  <div class="grid-2-cols">
+    <section>
+      <h2 class="section-title">Profile</h2>
+      <p style="line-height: 1.8;">
+        Passionate about programming, I am currently studying for a BTS CIEL (Cybersecurity, IT and Networks, Electronics) option A (IT and Networks) at Saint-Gabriel in Saint-Laurent-sur-Sèvre.<br><br>
+        My goal is to strengthen my skills to become a DevOps engineer or a full-stack developer.<br><br>
+        To stay up to date with the latest technologies, I work on personal projects that I publish on GitHub, which allows me to discover new methods and broaden my knowledge.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Interests</h2>
+      <ul style="grid-area: ul; line-height: 1.8; margin-left: -24px;">
+        <li>Passion for computer programming.</li>
+        <li>Self-taught in Java, Kotlin, and Rust.</li>
+        <li>Using Arch Linux as my main OS.</li>
+        <li>Creating websites, PC / Android applications, and video games.</li>
+        <li>Strong interest in Japanese and Eastern culture.</li>
+        <li>Drawing to relax.</li>
+      </ul>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .hero { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); 
+    text-align: center; 
+    margin-bottom: 64px; 
+  }
+  .charm-font { font-family: 'Charm', cursive; font-size: clamp(4rem, 10vw, 8rem); margin: 0; }
+  .grid-2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .section-title { color: var(--md-sys-color-primary);}
+  .interest-list { border-radius: 16px; background-color: var(--md-sys-color-surface-container); overflow: hidden; }
+  @media (max-width: 800px) { .grid-2-cols { grid-template-columns: 1fr; } }
+</style>

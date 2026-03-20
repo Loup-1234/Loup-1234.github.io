@@ -1,0 +1,171 @@
+---
+// src/components/Header.astro
+import { useTranslations } from '../i18n/ui';
+
+// On récupère la langue passée en paramètre (par défaut 'fr')
+const { lang = 'fr' } = Astro.props;
+const t = useTranslations(lang);
+
+const pathname = Astro.url.pathname;
+
+// On vérifie si on est sur la page d'accueil ou projets, peu importe la langue
+const isHome = pathname === '/' || pathname === '/en' || pathname === '/en/';
+const isProjets = pathname.includes('/projets') || pathname.includes('/projects');
+
+// Définir les liens selon la langue
+const homeLink = lang === 'fr' ? '/' : '/en/';
+const projectsLink = lang === 'fr' ? '/projets' : '/en/projects';
+---
+
+<div class="header-wrapper">
+  <header class="m3-floating-header">
+    
+    <div class="header-section tools">
+      <md-icon-button id="themeButton"><md-icon id="themeIcon">light_mode</md-icon></md-icon-button>
+      <md-icon-button id="colorButton"><md-icon>palette</md-icon></md-icon-button>
+    </div>
+
+    <nav class="header-section center-nav">
+      <md-text-button href={homeLink} class={isHome ? "active-nav" : ""}>
+        <md-icon slot="icon">home</md-icon>
+        <span class="nav-label">{t('nav.home')}</span>
+      </md-text-button>
+
+      <md-text-button href={projectsLink} class={isProjets ? "active-nav" : ""}>
+        <md-icon slot="icon">work</md-icon>
+        <span class="nav-label">{t('nav.projects')}</span>
+      </md-text-button>
+    </nav>
+
+    <div class="header-section lang-nav">
+      <md-text-button href={isProjets ? "/projets" : "/"} class={lang === 'fr' ? "active-lang lang-btn" : "lang-btn"}>FR</md-text-button>
+      <md-text-button href={isProjets ? "/en/projects" : "/en/"} class={lang === 'en' ? "active-lang lang-btn" : "lang-btn"}>EN</md-text-button>
+    </div>
+
+  </header>
+</div>
+
+<style>
+  .header-wrapper {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  .m3-floating-header {
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--md-sys-color-surface-container-high, #eaddff);
+    padding: 8px 12px;
+    border-radius: 64px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    gap: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .m3-floating-header md-text-button {
+    --md-text-button-label-text-color: var(--md-sys-color-on-surface);
+  }
+
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .center-nav {
+    flex: 1;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .active-nav {
+    background-color: var(--md-sys-color-secondary-container);
+    border-radius: 32px;
+    --md-text-button-label-text-color: var(--md-sys-color-on-secondary-container);
+    --md-text-button-icon-color: var(--md-sys-color-on-secondary-container);
+  }
+
+  .lang-btn {
+    min-width: 48px;
+    padding: 0;
+  }
+  
+  .active-lang {
+    --md-text-button-label-text-color: var(--md-sys-color-primary);
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--md-sys-color-primary);
+  }
+
+  .lang-btn {
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    --md-text-button-container-shape: 50%;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const html = document.documentElement;
+
+    // GESTION DU THÈME
+
+    const themeBtn = document.getElementById('themeButton') as HTMLElement;
+    const themeIcon = document.getElementById('themeIcon');
+    
+    let theme = localStorage.getItem('theme');
+    if (!theme) {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    
+    html.setAttribute('data-theme', theme);
+    if(themeIcon) themeIcon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
+
+    themeBtn?.addEventListener('click', () => {
+      theme = theme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      
+      if(themeIcon) themeIcon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
+      
+      themeBtn.blur();
+    });
+
+
+    // GESTION DES COULEURS
+
+    const colorBtn = document.getElementById('colorButton') as HTMLElement;
+    const palettes = ['amethyst', 'ocean', 'forest', 'sunset', 'rose', 'gold'];
+    
+    let color = localStorage.getItem('color') || 'amethyst';
+    html.setAttribute('data-color', color);
+
+    colorBtn?.addEventListener('click', () => {
+      color = palettes[(palettes.indexOf(color) + 1) % palettes.length];
+      html.setAttribute('data-color', color);
+      localStorage.setItem('color', color);
+      
+      colorBtn.blur();
+    });
+
+    const langBtns = document.querySelectorAll<HTMLElement>('.lang-btn');
+    langBtns.forEach(btn => {
+      btn.addEventListener('click', () => btn.blur());
+    });
+    
+  });
+</script>

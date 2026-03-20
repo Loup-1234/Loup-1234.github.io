@@ -1,0 +1,51 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Accueil">
+  <div class="hero">
+    <h1 class="charm-font">Alain Humeau</h1>
+    <h2>alias Loup_1234</h2>
+  </div>
+
+  <div class="grid-2-cols">
+    <section>
+      <h2 class="section-title">Profil</h2>
+      <p style="line-height: 1.8;">
+        Passionné par la programmation, je suis actuellement en BTS CIEL (Cybersécurité, Informatique et réseaux, Électronique) option A (Informatique et Réseaux) à Saint-Gabriel à Saint-Laurent-sur-Sèvre.<br><br>
+        Mon but est de renforcer mes compétences pour devenir DevOps ou développeur full-stack.<br><br>
+        Pour rester à jour avec les dernières technologies, je mène des projets personnels que je publie sur GitHub, ce qui me permet de découvrir de nouvelles méthodes et d'élargir mes connaissances.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="section-title">Centres d'intérêts</h2>
+      <ul style="grid-area: ul; line-height: 1.8; margin-left: -24px;">
+        <li>Passion pour la programmation informatique.</li>
+        <li>Apprentissage de Java, Kotlin et Rust en autodidacte.</li>
+        <li>Utilisation d'Arch Linux comme OS principal.</li>
+        <li>Création de sites web, d'applications PC / Android et de jeux vidéo.</li>
+        <li>Grand intérêt pour la culture japonaise et orientale.</li>
+        <li>Pratique du dessin pour me détendre.</li>
+      </ul>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .hero { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); 
+    text-align: center; 
+    margin-bottom: 64px; 
+  }
+  .charm-font { font-family: 'Charm', cursive; font-size: clamp(4rem, 10vw, 8rem); margin: 0; }
+  .grid-2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .section-title { color: var(--md-sys-color-primary);}
+  .interest-list { border-radius: 16px; background-color: var(--md-sys-color-surface-container); overflow: hidden; }
+  @media (max-width: 800px) { .grid-2-cols { grid-template-columns: 1fr; } }
+</style>

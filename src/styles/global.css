@@ -1,0 +1,201 @@
+/* src/styles/global.css */
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined");
+
+/* AMÉTHYSTE (Violet) - Par défaut */
+:root,
+html[data-color="amethyst"] {
+  --md-sys-color-primary: #6750a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #eaddff;
+  --md-sys-color-on-primary-container: #21005d;
+  --md-sys-color-secondary-container: #e8def8;
+  --md-sys-color-on-secondary-container: #1d192b;
+  --md-sys-color-surface: #fef7ff;
+  --md-sys-color-on-surface: #1d1b20;
+  --md-sys-color-surface-container: #f3edf7;
+  --md-sys-color-surface-container-high: #ece6f0;
+}
+html[data-theme="dark"][data-color="amethyst"],
+html[data-theme="dark"] {
+  --md-sys-color-primary: #d0bcff;
+  --md-sys-color-on-primary: #381e72;
+  --md-sys-color-primary-container: #4f378b;
+  --md-sys-color-on-primary-container: #eaddff;
+  --md-sys-color-secondary-container: #4a4458;
+  --md-sys-color-on-secondary-container: #e8def8;
+  --md-sys-color-surface: #141218;
+  --md-sys-color-on-surface: #e6e0e9;
+  --md-sys-color-surface-container: #211f26;
+  --md-sys-color-surface-container-high: #2b2930;
+}
+
+/* OCÉAN (Bleu) */
+html[data-color="ocean"] {
+  --md-sys-color-primary: #0061a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d1e4ff;
+  --md-sys-color-on-primary-container: #001d36;
+  --md-sys-color-secondary-container: #d7e3f7;
+  --md-sys-color-on-secondary-container: #101c2b;
+  --md-sys-color-surface: #fdfbff;
+  --md-sys-color-on-surface: #1a1c1e;
+  --md-sys-color-surface-container: #f1f4f9;
+  --md-sys-color-surface-container-high: #e2e2e9;
+}
+html[data-theme="dark"][data-color="ocean"] {
+  --md-sys-color-primary: #9ecaff;
+  --md-sys-color-on-primary: #003258;
+  --md-sys-color-primary-container: #00497d;
+  --md-sys-color-on-primary-container: #d1e4ff;
+  --md-sys-color-secondary-container: #3e4759;
+  --md-sys-color-on-secondary-container: #d7e3f7;
+  --md-sys-color-surface: #1a1c1e;
+  --md-sys-color-on-surface: #e2e2e6;
+  --md-sys-color-surface-container: #2a2d31;
+  --md-sys-color-surface-container-high: #32353a;
+}
+
+/* FORÊT (Vert) */
+html[data-color="forest"] {
+  --md-sys-color-primary: #006d36;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #94f9b1;
+  --md-sys-color-on-primary-container: #00210c;
+  --md-sys-color-secondary-container: #d4e8d3;
+  --md-sys-color-on-secondary-container: #111f15;
+  --md-sys-color-surface: #fcfdf6;
+  --md-sys-color-on-surface: #1a1c18;
+  --md-sys-color-surface-container: #f0f3e8;
+  --md-sys-color-surface-container-high: #e8ebe1;
+}
+html[data-theme="dark"][data-color="forest"] {
+  --md-sys-color-primary: #78dc97;
+  --md-sys-color-on-primary: #00391a;
+  --md-sys-color-primary-container: #005227;
+  --md-sys-color-on-primary-container: #94f9b1;
+  --md-sys-color-secondary-container: #394b3f;
+  --md-sys-color-on-secondary-container: #d4e8d3;
+  --md-sys-color-surface: #1a1c18;
+  --md-sys-color-on-surface: #e2e3dd;
+  --md-sys-color-surface-container: #2a2d28;
+  --md-sys-color-surface-container-high: #30332d;
+}
+
+/* SUNSET (Orange) */
+html[data-color="sunset"] {
+  --md-sys-color-primary: #8c5000;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #ffdcbe;
+  --md-sys-color-on-primary-container: #2c1600;
+  --md-sys-color-secondary-container: #f4e0d0;
+  --md-sys-color-on-secondary-container: #27180d;
+  --md-sys-color-surface: #fffbff;
+  --md-sys-color-on-surface: #201a17;
+  --md-sys-color-surface-container: #f7efea;
+  --md-sys-color-surface-container-high: #f1e9e4;
+}
+html[data-theme="dark"][data-color="sunset"] {
+  --md-sys-color-primary: #ffb870;
+  --md-sys-color-on-primary: #4a2800;
+  --md-sys-color-primary-container: #693c00;
+  --md-sys-color-on-primary-container: #ffdcbe;
+  --md-sys-color-secondary-container: #402d20;
+  --md-sys-color-on-secondary-container: #f4e0d0;
+  --md-sys-color-surface: #201a17;
+  --md-sys-color-on-surface: #ece0da;
+  --md-sys-color-surface-container: #312a26;
+  --md-sys-color-surface-container-high: #3c3530;
+}
+
+/* ROSE (Rose) */
+html[data-color="rose"] {
+  --md-sys-color-primary: #984061;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #ffd9e2;
+  --md-sys-color-on-primary-container: #3e001d;
+  --md-sys-color-secondary-container: #f9d8e2;
+  --md-sys-color-on-secondary-container: #2e151e;
+  --md-sys-color-surface: #fff8f8;
+  --md-sys-color-on-surface: #201a1b;
+  --md-sys-color-surface-container: #f8efef;
+  --md-sys-color-surface-container-high: #f2eaea;
+}
+html[data-theme="dark"][data-color="rose"] {
+  --md-sys-color-primary: #ffb1c8;
+  --md-sys-color-on-primary: #5e1133;
+  --md-sys-color-primary-container: #7b2949;
+  --md-sys-color-on-primary-container: #ffd9e2;
+  --md-sys-color-secondary-container: #462a33;
+  --md-sys-color-on-secondary-container: #f9d8e2;
+  --md-sys-color-surface: #201a1b;
+  --md-sys-color-on-surface: #ece0e0;
+  --md-sys-color-surface-container: #312a2b;
+  --md-sys-color-surface-container-high: #3c3536;
+}
+
+/* GOLD (Jaune/Or) */
+html[data-color="gold"] {
+  --md-sys-color-primary: #785900;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #ffdf9e;
+  --md-sys-color-on-primary-container: #261a00;
+  --md-sys-color-secondary-container: #ebe1d0;
+  --md-sys-color-on-secondary-container: #201b11;
+  --md-sys-color-surface: #fffbff;
+  --md-sys-color-on-surface: #1e1b16;
+  --md-sys-color-surface-container: #f4efe9;
+  --md-sys-color-surface-container-high: #eee9e3;
+}
+html[data-theme="dark"][data-color="gold"] {
+  --md-sys-color-primary: #fabd00;
+  --md-sys-color-on-primary: #3f2e00;
+  --md-sys-color-primary-container: #5b4300;
+  --md-sys-color-on-primary-container: #ffdf9e;
+  --md-sys-color-secondary-container: #3a3022;
+  --md-sys-color-on-secondary-container: #ebe1d0;
+  --md-sys-color-surface: #1e1b16;
+  --md-sys-color-on-surface: #e8e2d9;
+  --md-sys-color-surface-container: #2e2b25;
+  --md-sys-color-surface-container-high: #393630;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px 48px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  --md-sys-color-primary-container: var(--md-sys-color-primary-container);
+  --md-sys-color-on-primary-container: var(--md-sys-color-on-primary-container);
+  --md-icon-button-icon-color: var(--md-sys-color-on-surface);
+  --md-icon-button-hover-icon-color: var(--md-sys-color-primary);
+  --md-text-button-icon-color: var(--md-sys-color-on-surface);
+  --md-list-item-label-text-color: var(--md-sys-color-on-surface);
+}
+
+/* Assure que tes SVG personnalisés du footer prennent bien la couleur du texte */
+md-icon-button svg {
+  fill: var(--md-sys-color-on-surface);
+  transition: fill 0.2s ease;
+}
+md-icon-button:hover svg {
+  fill: var(--md-sys-color-primary);
+}
